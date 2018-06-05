@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+                "/Users/kevinneag/Desktop/Spring_5/tasks/src/main/frontend/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
