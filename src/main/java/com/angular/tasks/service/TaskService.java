@@ -6,5 +6,9 @@ import org.springframework.stereotype.Service;
 @Service
 public interface TaskService  {
 
-    public Iterable<Task> listTasks();
+     Iterable<Task> listTasks();
+
+     Task save(Task task);
+
+
 }
