@@ -30,9 +30,9 @@ export class TasksListComponent implements OnInit {
       return task.completed ? 'label-success' : 'label-primary';
   }
 
-  onTaskChangeEvent(event, Task) {
+    onTaskChange(event: Event, task: Task) {
 
-      console.log('Tasks had changed');
-  }
+        this.taskService.saveTask(task, (<HTMLInputElement>event.target).checked).subscribe();
+    }
 
 }
