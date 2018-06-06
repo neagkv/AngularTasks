@@ -5,6 +5,9 @@
     "ng": "ng",
     "start": "ng serve --proxy-config proxy-conf.json",
     "build": "ng build",
+    "postbuild": "npm run deploy",
+    "predeploy": "rimraf ../resources/static/ && mkdirp ../resources/static",
+    "deploy": "copyfiles -f \"dist/**\" ../resources/static",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,7 +24,10 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "bootstrap": "^3.3.7",
+    "copyfiles": "^2.0.0",
     "core-js": "^2.5.4",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
